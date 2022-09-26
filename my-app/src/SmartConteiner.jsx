@@ -14,7 +14,13 @@ class SmartConteiner extends React.Component{
     render(){
         return(<>
             <div>
-            <Card key={this.props.city.id} name={this.props.city.base} wather={this.props.city.weather}/>
+            <Card key={this.props.city.id} 
+            name={this.props.city.name}
+            main={this.props.city.main}
+            country={this.props.city.country}
+            tempAct={this.props.city.tempAct}
+            img={this.props.city.img}
+            />
             </div>
         </>)
     }
