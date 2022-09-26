@@ -1,9 +1,9 @@
-import { DECREMENT,INCREMENT,GET_USERS } from "./redux-actions";
+import { DECREMENT,INCREMENT,GET_USERS,GET_CITY } from "./redux-actions";
 
 const initialState={
     contador:0,
-    contador_2:10,
     users:["hola","mati"],
+    city:{},
 }
 
 const reducer = (state= initialState, action)=>{
@@ -19,6 +19,10 @@ const reducer = (state= initialState, action)=>{
         }
         case GET_USERS:{
             return{...state,users:action.payload}
+        }
+        case GET_CITY:
+        {
+            return{...state,city:action.payload}
         }
         default:
         {
