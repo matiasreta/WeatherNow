@@ -11,7 +11,8 @@ class Card extends React.Component{
     
             <h2>Card</h2>
             <div>
-                <p>Base?: {this.props.name} </p>
+                <p>Base: {this.props.name} </p>
+                { }
             </div>
             
             </>)}

@@ -1,4 +1,4 @@
-import Card from "./Card"
+import SmartConteiner from "./SmartConteiner";
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
         <h1>WeatherNOW</h1>
       </header>
       <div>
-        <Card/>
+        <SmartConteiner/>
       </div>
     </div>
   );
