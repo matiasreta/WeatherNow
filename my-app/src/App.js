@@ -1,11 +1,11 @@
 import SmartConteiner from "./SmartConteiner";
-
+import {Nav} from "./Nav"
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>WeatherNOW</h1>
-      </header>
+    <div>
+      <div>
+        <Nav/>
+      </div>
       <div>
         <SmartConteiner/>
       </div>

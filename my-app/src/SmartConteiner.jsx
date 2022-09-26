@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import {getCityData} from "./redux-actions";
-import Card from "./Card";
+import {Card} from "./Card";
 
 class SmartConteiner extends React.Component{
     //state={cityes:[]}
@@ -26,6 +26,7 @@ class SmartConteiner extends React.Component{
     }
 
 }
+
 
 
 const mapStateToProps=(state)=>{
