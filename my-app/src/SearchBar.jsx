@@ -14,12 +14,15 @@ class SearchBar extends React.Component{
     componentDidUpdate(){
         console.log(this.state.text)
     }
+    clickHandler(){
+      console.log("clickeooo")  
+    }
    
     render(){
         return(<>
         <div>
             <input type="search" onChange={(event)=>this.eventListener(event)}/>
-            <button>🔎</button>
+            <button onClick={()=>this.clickHandler()}>🔎</button>
         </div>
         </>)
     }
