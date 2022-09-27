@@ -6,14 +6,17 @@ class SearchBar extends React.Component{
 
         this.state={text:""}
     }
-
+   
     render(){
         return(<>
         <div>
-            <input type="search"/>
+            <input type="search" onChange={(value)=>eventListener(value)}/>
             <button>🔎</button>
         </div>
         </>)
     }
+}
+const eventListener=(value)=>{
+    this.setState({text: this.state.text = Event.target.value})
 }
 export {SearchBar}
