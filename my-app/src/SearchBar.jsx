@@ -1,4 +1,5 @@
 import React from "react";
+//import {connect} from "react-redux";
 
 class SearchBar extends React.Component{
     constructor(props){
@@ -6,8 +7,8 @@ class SearchBar extends React.Component{
         this.state={text:""}
     
         this.eventListener=(event)=>{
-            this.setState({text: this.state.text = event.target.value})
-            
+            this.setState({ text: this.state.text = event.target.value})
+            // no esta mutado
         }
 
     }
