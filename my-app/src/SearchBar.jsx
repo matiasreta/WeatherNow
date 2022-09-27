@@ -7,9 +7,12 @@ class SearchBar extends React.Component{
     
         this.eventListener=(event)=>{
             this.setState({text: this.state.text = event.target.value})
-            console.log(this.state.text)
+            
         }
 
+    }
+    componentDidUpdate(){
+        console.log(this.state.text)
     }
    
     render(){
