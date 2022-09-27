@@ -8,7 +8,7 @@ class SmartConteiner extends React.Component{
 
     componentDidMount(){
         console.log("se creó");
-        this.props.getCityData("Lima"); 
+        this.props.getCityData("Buenos Aires"); 
     }
 
     render(){
