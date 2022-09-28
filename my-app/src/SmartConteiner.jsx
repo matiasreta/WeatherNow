@@ -6,7 +6,7 @@ class SmartConteiner extends React.Component{
     //state={cityes:[]}
 
     componentDidMount(){
-        console.log("se creó");
+        console.log("created component");
     }
 
     render(){

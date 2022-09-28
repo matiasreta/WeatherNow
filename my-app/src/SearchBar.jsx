@@ -10,21 +10,14 @@ class SearchBar extends React.Component{
     
         this.eventListener=(event)=>{
             this.setState({text:event.target.value})
-            // no esta mutado
         }
         this.clickHandler=()=>{
             this.props.getCityData(this.state.text)
-            console.log("se buscó")
         }
-
     }
     componentDidUpdate(){
-        console.log(this.state.text)
-        
+        console.log(this.state.text) 
     }
-    
-    
-
     render(){
         return(<>
         <div>
@@ -36,7 +29,6 @@ class SearchBar extends React.Component{
 }
 const mapDispatchToProps=(dispatch)=>{
     return{getCityData:(city)=>dispatch(getCityData(city))}
-    }
-
+}
 
 export default connect(null, mapDispatchToProps)(SearchBar);
