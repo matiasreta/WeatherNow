@@ -1,24 +1,32 @@
 import React from "react";
-//import {connect} from "react-redux";
+import { connect } from "react-redux";
+import { getCityData } from "./redux-actions";
 
 class SearchBar extends React.Component{
     constructor(props){
         super(props);
+
         this.state={text:""}
     
         this.eventListener=(event)=>{
             this.setState({ text: this.state.text = event.target.value})
             // no esta mutado
         }
+        this.clickHandler=()=>{
+            this.props.getCityData(this.state.text)
+            console.log("se buscó")
+            console.log(this.props.city)
+            
+        }
 
     }
     componentDidUpdate(){
         console.log(this.state.text)
+        
     }
-    clickHandler(){
-      console.log("clickeooo")  
-    }
-   
+    
+    
+
     render(){
         return(<>
         <div>
@@ -28,5 +36,12 @@ class SearchBar extends React.Component{
         </>)
     }
 }
+const mapDispatchToProps=(dispatch)=>{
+    return{getCityData:(city)=>dispatch(getCityData(city))}
+    }
 
-export {SearchBar}
+const mapStateToProps=(state)=>{
+    return{city:state.city}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);

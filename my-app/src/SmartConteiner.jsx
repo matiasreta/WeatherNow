@@ -8,7 +8,6 @@ class SmartConteiner extends React.Component{
 
     componentDidMount(){
         console.log("se creó");
-        this.props.getCityData("Buenos Aires"); 
     }
 
     render(){
@@ -32,8 +31,5 @@ class SmartConteiner extends React.Component{
 const mapStateToProps=(state)=>{
     return{city:state.city}
 }
-const mapDispatchToProps=(dispatch)=>{
-   return{getCityData:(city)=>{dispatch(getCityData(city))}}
-}
 
-export default connect(mapStateToProps,mapDispatchToProps)(SmartConteiner)
+export default connect(mapStateToProps,null)(SmartConteiner)

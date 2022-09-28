@@ -17,7 +17,7 @@ export const getUsers =()=>{
     }
 }
 export const getCityData=(city)=>{
-    const key="4ae2636d8dfbdc3044bede63951a019b";
+    const key="a876ef9be82dcd6e06130bb4b5694fff";
     return function(dispatch){
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`)
         .then(response=>response.json())
