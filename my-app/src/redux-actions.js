@@ -1,6 +1,4 @@
-
 export const GET_CITY = "GET_CITY"
-
 
 export const getCityData=(city)=>{
     const key="a876ef9be82dcd6e06130bb4b5694fff";
