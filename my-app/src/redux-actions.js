@@ -1,21 +1,7 @@
-export const INCREMENT = "INCREMENT"
-export const DECREMENT = "DECREMENT"
-export const GET_USERS = "GET_USERS"
+
 export const GET_CITY = "GET_CITY"
 
-export const decrement=()=>{
-    return {type:DECREMENT}
-}
-export const increment=()=>{
-    return {type:INCREMENT}
-}
-export const getUsers =()=>{
-    return function(dispatch){
-        fetch("https://jsonplaceholder.typicode.com/users")
-        .then((response)=>response.json())
-        .then((data)=>dispatch({type:GET_USERS,payload:data}))
-    }
-}
+
 export const getCityData=(city)=>{
     const key="a876ef9be82dcd6e06130bb4b5694fff";
     return function(dispatch){

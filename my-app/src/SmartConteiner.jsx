@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import {getCityData} from "./redux-actions";
 import {Card} from "./Card";
 
 class SmartConteiner extends React.Component{
