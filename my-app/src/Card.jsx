@@ -7,12 +7,14 @@ class Card extends React.Component{
     
             <h2>Card</h2>
             <div>
+                <button>X</button>
+            </div>
+            <div>
                 <p>City: {this.props.name} </p>
                 <p>Temperatura: {this.props.tempAct} </p>
                 <p>Pais: {this.props.country} </p>
                 <p>main: {this.props.main} </p>
                 <p>img: {this.props.img} </p>
-                
             </div>
             
             </>)}
