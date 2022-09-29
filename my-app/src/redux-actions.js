@@ -1,5 +1,5 @@
-export const GET_CITY = "GET_CITY"
-export const DISCARD = "DISCARD"
+export const GET_CITY = "GET_CITY";
+export const DISCARD = "DISCARD";
 
 export const getCityData=(city)=>{
     const key="a876ef9be82dcd6e06130bb4b5694fff";
@@ -19,11 +19,9 @@ export const getCityData=(city)=>{
                         img:data.weather[0].icon,
             }
             dispatch({type:GET_CITY,payload:city})
-        
         })
     }
-
-}
+};
 export const discardCity=(cityID)=>{
     return{type:DISCARD, payload:cityID}
-}
+};

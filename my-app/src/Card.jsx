@@ -5,18 +5,12 @@ import {discardCity} from "./redux-actions"
 class Card extends React.Component{
     constructor(props){
         super(props);
-
         this.clickHandler=()=>{
             this.props.discardCity(this.props.id)
         }
-
     }
-
-    
-    
     render(){
         return(<>
-    
             <h2>Card</h2>
             <div>
                 <button onClick={()=>this.clickHandler()}>❌</button>
@@ -28,8 +22,7 @@ class Card extends React.Component{
                 <p>main: {this.props.main} </p>
                 <p>img: {this.props.img} </p>
             </div>
-            
-            </>)}
+        </>)}
 }
 const mapDispatchToProps=(dispatch)=>{
     return{discardCity:(cityID)=>dispatch(discardCity(cityID))}

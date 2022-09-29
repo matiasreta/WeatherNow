@@ -7,9 +7,6 @@ class SmartConteiner extends React.Component{
     componentDidMount(){
         console.log("created component");
     };
-    componentDidUpdate(){
-        console.log("se actualizó")
-    }
     render(){
         return(<>
             <div>
@@ -26,7 +23,8 @@ class SmartConteiner extends React.Component{
     };
 }
 
-// puedo hacer un filter y mostrar una sola linea aca.
+// puedo hacer un filter y mostrar una sola linea aca. Recien cuando el componente se Monta puedo crear la lista.
+
 // ahora mismo puedo agregar pero no puedo eliminar y mostrarlo. por que no uso el state
 
 
