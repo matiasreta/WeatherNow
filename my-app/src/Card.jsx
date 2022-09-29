@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+import {discardCity} from "./redux-actions"
 
 class Card extends React.Component{
     
@@ -7,7 +9,7 @@ class Card extends React.Component{
     
             <h2>Card</h2>
             <div>
-                <button>X</button>
+                <button>❌</button>
             </div>
             <div>
                 <p>City: {this.props.name} </p>
@@ -19,5 +21,7 @@ class Card extends React.Component{
             
             </>)}
 }
-
-export{Card};
+const mapDispatchToProps=(dispatch)=>{
+    return{discardCity:(cityID)=>dispatch(discardCity(cityID))}
+}
+export default connect(null,mapDispatchToProps)(Card);

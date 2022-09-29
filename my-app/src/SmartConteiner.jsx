@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import {Card} from "./Card";
+import Card from "./Card";
 
 class SmartConteiner extends React.Component{
     
@@ -13,7 +13,7 @@ class SmartConteiner extends React.Component{
     render(){
         return(<>
             <div>
-                {this.props.cities?this.props.cities.map(item=>
+            {this.props.cities?this.props.cities.map(item=>
             <Card key={item.id}
             name={item.name}
             main={item.main}
