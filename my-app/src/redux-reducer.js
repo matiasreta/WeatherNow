@@ -1,4 +1,4 @@
-import {GET_CITY } from "./redux-actions";
+import {GET_CITY,DISCARD } from "./redux-actions";
 
 const initialState={
     cities:[],
@@ -7,9 +7,12 @@ const initialState={
 const reducer = (state= initialState, action)=>{
 
     switch(action.type){
-        case GET_CITY:
-        {
+        case GET_CITY:{
             return{...state,cities:[...state.cities,action.payload]}
+        }
+        case DISCARD:{
+            const arr = this.state.cities.filter(item=> item.id===action.payload)
+            return{...state,cities:arr}
         }
         default:
         {
