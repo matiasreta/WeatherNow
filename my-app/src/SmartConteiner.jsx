@@ -5,36 +5,38 @@ import {Card} from "./Card";
 class SmartConteiner extends React.Component{
     constructor(props){
         super(props)
-        this.state={cities:[2,2]}
+        this.cities=[];
 
         this.putCitiesStage=()=>{
-        const [copyCities]=this.state.cities;
-        this.setState({cities: [copyCities,3]})
-        }
+            this.cities.push(this.props.city)
+        };
 
-        }
-
+    };
     componentDidMount(){
         console.log("created component");
-    }
+    };
     componentDidUpdate(){
-        console.log(this.state.cities)
-    }
-
+        this.putCitiesStage();
+        console.log(this.cities)
+    };
 
     render(){
         return(<>
             <div>
-            <Card key={this.props.city.id} 
-            name={this.props.city.name}
-            main={this.props.city.main}
-            country={this.props.city.country}
-            tempAct={this.props.city.tempAct}
-            img={this.props.city.img}
-            />
+                {this.cities?this.cities.map(item=>
+
+                <Card key={item.id} 
+                name={item.name}
+                main={item.main}
+                country={item.country}
+                tempAct={item.tempAct}
+                img={item.img}
+
+                />):"hola"}
             </div>
+            {/* <button onClick={()=>this.putCitiesStage()}>agregar</button> */}
         </>)
-    }
+    };
 
 }
 

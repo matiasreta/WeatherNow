@@ -12,7 +12,7 @@ export const getCityData=(city)=>{
                         description:data.weather[0].description,
                         tempMax:data.main.temp_max,
                         tempMin:data.main.temp_min,
-                        humindity:data.main.humindity,
+                        humidity:data.main.humidity,
                         country:data.sys.country,
                         tempAct:data.main.temp,
                         img:data.weather[0].icon,
