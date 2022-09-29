@@ -3,13 +3,23 @@ import { connect } from "react-redux";
 import {discardCity} from "./redux-actions"
 
 class Card extends React.Component{
+    constructor(props){
+        super(props);
+
+        this.clickHandler=()=>{
+            this.props.discardCity(this.props.id)
+        }
+
+    }
+
+    
     
     render(){
         return(<>
     
             <h2>Card</h2>
             <div>
-                <button>❌</button>
+                <button onClick={()=>this.clickHandler()}>❌</button>
             </div>
             <div>
                 <p>City: {this.props.name} </p>

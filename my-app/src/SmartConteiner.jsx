@@ -19,6 +19,7 @@ class SmartConteiner extends React.Component{
             main={item.main}
             country={item.country}
             tempAct={item.tempAct}
+            id={item.id}
             />):null}
             </div>
         </>)

@@ -11,7 +11,7 @@ const reducer = (state= initialState, action)=>{
             return{...state,cities:[...state.cities,action.payload]}
         }
         case DISCARD:{
-            const arr = this.state.cities.filter(item=> item.id===action.payload)
+            const arr = state.cities.filter(item=> item.id!==action.payload)
             return{...state,cities:arr}
         }
         default:
