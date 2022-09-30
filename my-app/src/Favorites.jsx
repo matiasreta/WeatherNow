@@ -3,12 +3,10 @@ import React from "react";
 
 export const Favorites=(props)=>{
 
- //const [state,setState]=useState(initialState);
-
     return(
         <>
             <div>
-                <p>City Click</p>
+                <div onClick={()=>console.log("clickeo")}>{props.name}</div>
             </div>
         </>
     )
