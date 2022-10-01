@@ -26,7 +26,7 @@ export const getCityData=(city)=>{
 export const discardCity=(cityID)=>{
     return{type:DISCARD, payload:cityID}
 };
-export const setFavorites=(cityName)=>{
-    return{type:SET_FAVORITES,payload:cityName}
+export const setFavorites=(name,id)=>{
+    return{type:SET_FAVORITES,payload:{name:name,id:id}}
 }
 

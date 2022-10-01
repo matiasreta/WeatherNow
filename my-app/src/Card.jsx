@@ -9,7 +9,7 @@ class Card extends React.Component{
             this.props.discardCity(this.props.id)
         }
         this.clickFavorite=()=>{
-            this.props.setFavorites(this.props.name)
+            this.props.setFavorites(this.props.name,this.props.id)
         }
     }
     componentWillUnmount(){
@@ -20,8 +20,8 @@ class Card extends React.Component{
         return(<>
             <h2>{this.props.name}, {this.props.country} </h2>
             <div>
-                <button onClick={()=>this.clickHandler}>❌</button>
-                <button onClick={()=>this.clickFavorite}>❤️</button>
+                <button onClick={this.clickHandler}>❌</button>
+                <button onClick={this.clickFavorite}>❤️</button>
             </div>
             <div>
                 <p>Temperatura: {this.props.tempAct} </p>
@@ -31,7 +31,7 @@ class Card extends React.Component{
 }
 const mapDispatchToProps=(dispatch)=>{
     return{discardCity:(cityID)=>dispatch(discardCity(cityID)),
-        setFavorites:(cityName)=>dispatch(setFavorites(cityName))
+        setFavorites:(name,id)=>dispatch(setFavorites(name,id))
     }
 }
 export default connect(null,mapDispatchToProps)(Card);
