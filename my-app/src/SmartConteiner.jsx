@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import Card from "./Card";
+import { StyledConteiner } from "./styles/StyleConteiner";
 
 class SmartConteiner extends React.Component{
     
@@ -10,7 +11,7 @@ class SmartConteiner extends React.Component{
 
     render(){
         return(<>
-            <div>
+            <StyledConteiner>
             {this.props.cities?this.props.cities.map(item=>
             <Card key={item.id}
             name={item.name}
@@ -19,7 +20,7 @@ class SmartConteiner extends React.Component{
             tempAct={item.tempAct}
             id={item.id}
             />):null}
-            </div>
+            </StyledConteiner>
         </>)
     };
 }
