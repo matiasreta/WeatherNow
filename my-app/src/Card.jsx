@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import {discardCity, setFavorites} from "./redux-actions"
+import { StyleCard } from "./styles/StyleCard";
 
 class Card extends React.Component{
     constructor(props){
@@ -17,7 +18,7 @@ class Card extends React.Component{
     // }
 
     render(){
-        return(<>
+        return(<StyleCard>
             <h2>{this.props.name}, {this.props.country} </h2>
             <div>
                 <button onClick={this.clickHandler}>❌</button>
@@ -27,7 +28,7 @@ class Card extends React.Component{
                 <p>Temperatura: {this.props.tempAct} </p>
                 <p>main: {this.props.main} </p>
             </div>
-        </>)}
+        </StyleCard>)}
 }
 const mapDispatchToProps=(dispatch)=>{
     return{discardCity:(cityID)=>dispatch(discardCity(cityID)),

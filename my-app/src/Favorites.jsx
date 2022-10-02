@@ -10,7 +10,5 @@ export const Favorites=(props)=>{
         dispatch(getCityData(props.name))
     }
 
-    return(<div>
-        <ButtonFavorites onClick={clickHandler}>{props.name}</ButtonFavorites>
-        </div>)
+    return(<ButtonFavorites onClick={clickHandler}>{props.name}</ButtonFavorites>)
 }
