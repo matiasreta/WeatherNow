@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { getCityData } from "./redux-actions";
+import {ButtonFavorites} from "./styles/ButtonFavorites"
 
 export const Favorites=(props)=>{
     const dispatch = useDispatch();
@@ -10,6 +11,6 @@ export const Favorites=(props)=>{
     }
 
     return(<div>
-        <button onClick={clickHandler}><p>{props.name}</p></button>
+        <ButtonFavorites onClick={clickHandler}>{props.name}</ButtonFavorites>
         </div>)
 }
