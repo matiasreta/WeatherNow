@@ -13,9 +13,9 @@ class SearchBar extends React.Component{
             this.props.getCityData(this.state.text)
         }
     }
-    componentDidUpdate(){
-        console.log(this.state.text) 
-    }
+    // componentDidUpdate(){
+    //     console.log(this.state.text) 
+    // }
     render(){
         return(<>
         <div>

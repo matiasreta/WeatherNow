@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Favorites } from "./Favorites";
+import { StyleFavoriteList } from "./styles/StyleFavoriteList";
 
 
 export const FavoritesList=()=>{
@@ -9,10 +10,10 @@ export const FavoritesList=()=>{
     
     return(<>
         <h4>favorite cities </h4>
-        <div>
+        <StyleFavoriteList>
             {list.map((item)=>{
                 return(<Favorites key={item.id} name={item.name}/>)
             })}
-        </div>
+        </StyleFavoriteList>
     </>)
 }

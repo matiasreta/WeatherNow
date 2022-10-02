@@ -12,9 +12,9 @@ class Card extends React.Component{
             this.props.setFavorites(this.props.name,this.props.id)
         }
     }
-    componentWillUnmount(){
-        console.log("discarded component")
-    }
+    // componentWillUnmount(){
+    //     console.log("discarded component")
+    // }
 
     render(){
         return(<>

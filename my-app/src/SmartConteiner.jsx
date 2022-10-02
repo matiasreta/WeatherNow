@@ -4,9 +4,10 @@ import Card from "./Card";
 
 class SmartConteiner extends React.Component{
     
-    componentDidMount(){
-        console.log("created component");
-    };
+    // componentDidMount(){
+    //     console.log("created component");
+    // };
+
     render(){
         return(<>
             <div>
