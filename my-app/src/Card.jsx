@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import {discardCity, setFavorites} from "./redux-actions"
-import { StyleCard } from "./styles/StyleCard";
+import { StyleCard, StyleTwoOptions } from "./styles/StyleCard";
 
 class Card extends React.Component{
     constructor(props){
@@ -20,14 +20,20 @@ class Card extends React.Component{
     render(){
         return(<StyleCard>
             <h2>{this.props.name}, {this.props.country} </h2>
-            <div>
-                <button onClick={this.clickHandler}>❌</button>
-                <button onClick={this.clickFavorite}>❤️</button>
-            </div>
+            
             <div>
                 <p>Temperatura: {this.props.tempAct} </p>
+                <p>Max: {Math.round(this.props.tempMax)} </p>
+                <p>Min: {this.props.tempMin} </p>
                 <p>main: {this.props.main} </p>
+                <p>humidity:{this.props.humidity}</p>
+
             </div>
+            <StyleTwoOptions>
+                <button className="like" onClick={this.clickHandler}>❌</button>
+                <button className="discard" onClick={this.clickFavorite}>❤️</button>
+            </StyleTwoOptions>
+            
         </StyleCard>)}
 }
 const mapDispatchToProps=(dispatch)=>{

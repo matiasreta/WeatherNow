@@ -18,6 +18,9 @@ class SmartConteiner extends React.Component{
             main={item.main}
             country={item.country}
             tempAct={item.tempAct}
+            tempMax ={item.tempMax}
+            tempMin ={item.tempMin}
+            humidity={item.humidity}
             id={item.id}
             />):null}
             </StyledConteiner>
