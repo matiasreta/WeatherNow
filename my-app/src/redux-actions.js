@@ -8,15 +8,16 @@ export const getCityData=(city)=>{
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`)
         .then(response=>response.json())
         .then(data=>{
+            const kelvin=273.15;
             const city={main:data.weather[0].main,
                         name: data.name,
                         id: data.id,
                         description:data.weather[0].description,
-                        tempMax:data.main.temp_max,
-                        tempMin:data.main.temp_min,
+                        tempMax:data.main.temp_max-kelvin,
+                        tempMin:data.main.temp_min-kelvin,
                         humidity:data.main.humidity,
                         country:data.sys.country,
-                        tempAct:data.main.temp,
+                        tempAct:data.main.temp-kelvin,
                         img:data.weather[0].icon,
             }
             dispatch({type:GET_CITY,payload:city})
