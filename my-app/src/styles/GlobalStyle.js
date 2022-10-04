@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family:  Helvetica;
 
+    body{
+        background: #e4ffa6;
+    }
+
 } 
         
 `

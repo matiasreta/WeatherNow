@@ -11,7 +11,7 @@ class SmartConteiner extends React.Component{
 
     render(){
         return(<>
-            <StyledConteiner>
+            <StyledConteiner >
             {this.props.cities?this.props.cities.map(item=>
             <Card key={item.id}
             name={item.name}
