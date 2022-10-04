@@ -21,12 +21,12 @@ class Card extends React.Component{
         return(<StyleCard>
             <div>
             <h2>{this.props.name}, {this.props.country} </h2>
-            
+
                 <p>{Math.round(this.props.tempAct)} °C</p>
                 <p>Max: {Math.round(this.props.tempMax)} </p>
                 <p>Min: {Math.round(this.props.tempMin)} </p>
                 <p>main: {this.props.main} </p>
-                <p>humidity:{this.props.humidity}</p>
+                <p>humidity:{this.props.humidity}%</p>
             </div>
             <StyleTwoOptions>
                 <button className="like" onClick={this.clickHandler}>❌</button>
