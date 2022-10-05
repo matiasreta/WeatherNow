@@ -23,7 +23,7 @@ export const getCityData=(city)=>{
             dispatch({type:GET_CITY,payload:city})
         })
     }
-};
+}; 
 export const discardCity=(cityID)=>{
     return{type:DISCARD, payload:cityID}
 };
