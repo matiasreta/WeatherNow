@@ -15,13 +15,3 @@ background-size:cover;
 }
 
 `
-/*
-import img from './img/fondo.png';
-
-body{
-    background-image:url(${img});
-    background-size:cover;
-
-    background:url(${img}),url(${img});
-    background-blend-mode: color-burn;
-    } */
