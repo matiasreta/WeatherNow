@@ -9,6 +9,7 @@ height: 280px;
 position: relative;
 color: white;
 
+
 &:before{
   box-sizing: border-box;
   content: '';
@@ -19,9 +20,12 @@ color: white;
   z-index: 1;
   background: #2B3C78;
   mix-blend-mode:color-burn;
+  box-shadow:1px 1px 14px 1px #817f7f;
+  
 }
 
-div{
+div.main{
+  
   position: relative;
   z-index: 3;
 }

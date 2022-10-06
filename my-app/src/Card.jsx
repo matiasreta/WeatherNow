@@ -20,7 +20,7 @@ class Card extends React.Component{
     render(){
         return(
         <StyleCard>
-            <div>
+            <div className="main">
             <h3>{this.props.name}, {this.props.country} </h3>
 
                 <p >{Math.round(this.props.tempAct)} °C</p>
