@@ -30,8 +30,9 @@ class Card extends React.Component{
                 <p>humidity:{this.props.humidity}%</p>
             
             <div>
-                <button className="fav" onClick={this.clickHandler}>favorite</button>
-                <button className="del" onClick={this.clickFavorite}> delete </button>
+                <button className="fav" onClick={this.clickFavorite}> favorite </button>
+                <button className="del" onClick={this.clickHandler}> delete </button>
+                
             </div>
             </div>
         </StyleCard>)}
