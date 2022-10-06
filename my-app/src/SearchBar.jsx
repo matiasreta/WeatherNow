@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getCityData } from "./redux-actions";
+import {StyledSearchBar} from './styles/StyleSearchBar';
 
 class SearchBar extends React.Component{
     constructor(props){
@@ -13,16 +14,13 @@ class SearchBar extends React.Component{
             this.props.getCityData(this.state.text)
         }
     }
-    // componentDidUpdate(){
-    //     console.log(this.state.text) 
-    // }
     render(){
-        return(<>
+        return(<StyledSearchBar>
         <div>
             <input type="search" onChange={(event)=>this.eventListener(event)}/>
             <button onClick={()=>this.clickHandler()}>🔎</button>
         </div>
-        </>)
+        </StyledSearchBar>)
     }
 }
 const mapDispatchToProps=(dispatch)=>{

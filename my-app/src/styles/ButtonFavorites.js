@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 export const ButtonFavorites= styled.button`
-padding:  7px 37px;
+height: 30px;
+width: 120px;
 border-radius: 9999px;
-border:2px solid #bdbdbd;
-
-background-color: #f3f3f3;
+border:1px solid #D9D9D9;
+background-color: #eeeeee;
 
 `
