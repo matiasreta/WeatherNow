@@ -30,6 +30,7 @@ div.main{
   z-index: 3;
 }
 button{
+  color:#686161;
   border: none;
   background-color: #eeeeee;
   margin-top:93px
