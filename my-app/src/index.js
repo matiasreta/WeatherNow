@@ -9,12 +9,16 @@ import store from './redux-store';
 import reportWebVitals from './reportWebVitals';
 import {GlobalStyle} from './styles/GlobalStyle';
 
+import {BrowserRouter} from 'react-router-dom';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
+    <BrowserRouter>
     <GlobalStyle/>
     <App />
+    </BrowserRouter>
   </Provider>
 
 );
