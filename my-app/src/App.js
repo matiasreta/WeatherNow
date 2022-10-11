@@ -2,7 +2,7 @@ import SmartConteiner from "./SmartConteiner";
 import {Nav} from "./Nav"
 import {FavoritesList} from "./FavoritesList";
 import {Route} from 'react-router-dom'
-import { Stadistics } from "./Stadistics";
+import { Statistics } from "./Statistics";
 
 function App() {
   return (<div>
@@ -13,7 +13,7 @@ function App() {
 
       <Route  render={()=> (<SmartConteiner/>)} /> 
 
-      <Route> <Stadistics/> </Route>
+      <Route path={"/statistics"}> <Statistics/> </Route>
 
     </div>
   );

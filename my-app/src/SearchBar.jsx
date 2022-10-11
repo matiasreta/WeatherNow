@@ -16,10 +16,8 @@ class SearchBar extends React.Component{
     }
     render(){
         return(<StyledSearchBar>
-        <div>
             <input type="search" onChange={(event)=>this.eventListener(event)}/>
             <button onClick={()=>this.clickHandler()}>🔎</button>
-        </div>
         </StyledSearchBar>)
     }
 }
