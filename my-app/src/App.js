@@ -2,16 +2,19 @@ import SmartConteiner from "./SmartConteiner";
 import {Nav} from "./Nav"
 import {FavoritesList} from "./FavoritesList";
 import {Route} from 'react-router-dom'
+import { Stadistics } from "./Stadistics";
 
 function App() {
   return (<div>
 
       <Route path={"/"} component={Nav}  />  
 
-        <FavoritesList/>
+      <Route> <FavoritesList/> </Route>  
 
+      <Route  render={()=> (<SmartConteiner/>)} /> 
 
-        <SmartConteiner/>
+      <Route> <Stadistics/> </Route>
+
     </div>
   );
 }
